@@ -1,0 +1,158 @@
+
+/* Basic settings for the whole page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f7;
+    color: #333;
+}
+
+/* Website heading */
+header {
+    background-color: #176b60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Search and filter area */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #176b60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #105248;
+}
+
+/* Facility information */
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.information p {
+    margin: 0;
+}
+
+/* Map container */
+.map-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#map {
+    height: 550px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Map legend */
+.legend {
+    background-color: white;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.legend h2 {
+    margin-top: 0;
+}
+
+.legend p {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.hospital {
+    background-color: #2468c4;
+}
+
+.clinic {
+    background-color: #16845b;
+}
+
+.pharmacy {
+    background-color: #d58b16;
+}
+
+.dentist {
+    background-color: #8055b5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e1e8e8;
+    font-size: 13px;
+}
+
+/* Layout for mobile screens */
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

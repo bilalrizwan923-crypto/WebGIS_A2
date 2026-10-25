@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Healthcare Facilities in Lahore</title>
+
+    <!-- Leaflet map styling -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Our own CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Healthcare Facilities in Lahore</h1>
+        <p>Explore hospitals, clinics, pharmacies and dentists on the map.</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <label for="searchInput">Search facility:</label>
+            <input type="text" id="searchInput"
+                   placeholder="Enter a facility name">
+
+            <label for="categoryFilter">Facility type:</label>
+            <select id="categoryFilter">
+                <option value="all">All Facilities</option>
+                <option value="hospital">Hospitals</option>
+                <option value="clinic">Clinics</option>
+                <option value="pharmacy">Pharmacies</option>
+                <option value="dentist">Dentists</option>
+            </select>
+
+            <button id="reloadButton">Load Data Again</button>
+        </section>
+
+        <section class="information">
+            <p>Total facilities: <span id="totalCount">0</span></p>
+            <p>Facilities shown: <span id="visibleCount">0</span></p>
+            <p id="status">Loading healthcare data...</p>
+        </section>
+
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <section class="legend">
+            <h2>Map Legend</h2>
+            <p><span class="dot hospital"></span> Hospital</p>
+            <p><span class="dot clinic"></span> Clinic</p>
+            <p><span class="dot pharmacy"></span> Pharmacy</p>
+            <p><span class="dot dentist"></span> Dentist</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data source: OpenStreetMap contributors through Overpass API.</p>
+        <p>Map made using Leaflet.</p>
+    </footer>
+
+    <!-- Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Our own JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
